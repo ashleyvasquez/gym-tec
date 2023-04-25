@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
 import { Login } from "./components/Login";
 import { Register } from "./components/Register";
+import { Tabla } from "./components/Tabla";
+import { SortingTable } from "./components/SortingTable";
 
 /*
       <Router>
@@ -21,12 +22,21 @@ function App() {
     setCurrentForm(formName);
   }
 
-  return (
-    <div>
+  /*
+  <div>
       {
         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
       }
     </div>
+
+    <Tabla />
+  */
+
+  return (
+    <div>
+      <SortingTable />
+    </div>
+    
   );
 }
 
