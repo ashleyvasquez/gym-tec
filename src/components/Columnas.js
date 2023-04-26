@@ -1,3 +1,5 @@
+import { format } from "date-fns";
+
 export const Columnas = [
     {
         Header: 'Id',
@@ -12,7 +14,8 @@ export const Columnas = [
     {
         Header: 'Fecha de apertura',
         Footer: 'Fecha de apertura',
-        accessor: 'fecha_apertura'
+        accessor: 'fecha_apertura',
+        Cell: ({value}) => {return format(new Date(value), 'dd/MM/yyyy')}
     },
     {
         Header: 'Horario Atencion',
